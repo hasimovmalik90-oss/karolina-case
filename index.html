@@ -74,6 +74,10 @@
     .data-table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; white-space: nowrap; }
     .container, .container-wide { overflow-x: clip; }
     img, svg, video { max-width: 100%; }
+    /* производительность: тяжёлые GPU-эффекты, из-за которых мобильный Safari перезагружает вкладку */
+    .ambient, .spotlight { display: none !important; }
+    body::after { display: none !important; }
+    * { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; }
   }
 
   /* ============================================================ */
@@ -4377,7 +4381,10 @@
     const percent = (scrolled / total) * 100;
     document.documentElement.style.setProperty('--scroll', percent + '%');
   }
-  window.addEventListener('scroll', updateProgress, { passive: true });
+  let progressTicking = false;
+  window.addEventListener('scroll', () => {
+    if (!progressTicking) { requestAnimationFrame(() => { updateProgress(); progressTicking = false; }); progressTicking = true; }
+  }, { passive: true });
   updateProgress();
 
   const reveals = document.querySelectorAll('.reveal');
