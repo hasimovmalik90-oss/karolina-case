@@ -74,10 +74,12 @@
     .data-table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; white-space: nowrap; }
     .container, .container-wide { overflow-x: clip; }
     img, svg, video { max-width: 100%; }
-    /* производительность: тяжёлые GPU-эффекты, из-за которых мобильный Safari перезагружает вкладку */
-    .ambient, .spotlight { display: none !important; }
+    /* производительность: выключаем только реально дорогое (шум + матовое стекло), из-за чего Safari ронял вкладку */
     body::after { display: none !important; }
     * { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; }
+    /* золотое свечение возвращаем — но без дорогого blur(120px); анимация transform дёшева и вкладку не роняет */
+    .ambient::before { filter: none !important; opacity: 0.6 !important; width: 680px !important; height: 680px !important; background: radial-gradient(circle, rgba(255,184,77,0.16), transparent 62%) !important; }
+    .ambient::after { filter: none !important; opacity: 0.55 !important; width: 560px !important; height: 560px !important; background: radial-gradient(circle, rgba(255,184,77,0.12), transparent 62%) !important; }
   }
 
   /* ============================================================ */
