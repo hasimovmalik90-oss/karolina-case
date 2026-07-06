@@ -51,7 +51,7 @@
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; overflow-x: hidden; max-width: 100%; }
 
   body {
     font-family: var(--sans);
@@ -68,6 +68,13 @@
 
   /* Lock scroll while splash is visible */
   body.splash-active { overflow: hidden; height: 100vh; }
+
+  /* мобилка: ничто не тянет страницу вбок; широкие таблицы скроллятся внутри себя */
+  @media (max-width: 720px) {
+    .data-table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; white-space: nowrap; }
+    .container, .container-wide { overflow-x: clip; }
+    img, svg, video { max-width: 100%; }
+  }
 
   /* ============================================================ */
   /* SPLASH SCREEN                                                */
