@@ -2821,6 +2821,16 @@
   /* Thin horizontal stat slices: wider but short */
   .proof-shot.thin img { max-width: 420px; max-height: 140px; }
 
+  /* мобилка: обжимаем плитки и таблицы под ширину экрана (без overflow на корне — он ломает iOS-скролл) */
+  @media (max-width: 720px) {
+    .proof-shot { max-width: 100%; }
+    .proof-shot img,
+    .proof-shot.tall img,
+    .proof-shot.thin img { max-width: 100%; max-height: 440px; height: auto; }
+    .data-table { table-layout: fixed; }
+    .data-table th, .data-table td { overflow-wrap: anywhere; word-break: break-word; }
+  }
+
   .proof-shot-caption {
     margin-top: 12px;
     font-family: var(--mono);
