@@ -74,15 +74,19 @@
     .data-table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; white-space: nowrap; }
     .container, .container-wide { overflow-x: clip; }
     img, svg, video { max-width: 100%; }
-    /* iOS Safari роняет вкладку на тяжёлом рендере — убираем всё, что мобильный Safari не тянет */
+    /* iOS Safari роняет вкладку на тяжёлом рендере — убираем ТОЛЬКО дорогое (шум, матовое стекло, blur, анимации), свечение оставляем */
     body::after { display: none !important; }                 /* полноэкранный шум + mix-blend */
-    .ambient, .spotlight { display: none !important; }         /* fixed-слои: перерисовка на каждом кадре скролла */
+    .spotlight { display: none !important; }                  /* курсор-градиент, на телефоне бесполезен */
     * { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; }  /* матовое стекло */
     /* градиентный текст (background-clip) + drop-shadow — тяжёлый offscreen-буфер на гигантском числе; делаем сплошным */
     .hero-number { background: none !important; -webkit-text-fill-color: var(--ink-bright) !important; color: var(--ink-bright) !important; filter: none !important; }
     .hero-name { background: none !important; -webkit-text-fill-color: var(--gold) !important; color: var(--gold) !important; }
-    /* золотое свечение — дёшево, фоном секции героя (без fixed-слоёв и blur) */
-    .hero { background: radial-gradient(ellipse 115% 55% at 50% 12%, rgba(255,184,77,0.13), transparent 62%) !important; }
+    /* ЗОЛОТОЕ СВЕЧЕНИЕ на фоне — fixed-орбы, но БЕЗ blur и БЕЗ анимации (это и роняло iOS); статичный градиент дёшев и светится по всему фону при скролле */
+    .ambient { display: block !important; }
+    .ambient::before, .ambient::after { animation: none !important; filter: none !important; }
+    .ambient::before { top: -120px !important; left: -90px !important; width: 520px !important; height: 520px !important; opacity: 0.8 !important; background: radial-gradient(circle, rgba(255,184,77,0.22), transparent 66%) !important; }
+    .ambient::after { bottom: -140px !important; right: -90px !important; width: 480px !important; height: 480px !important; opacity: 0.62 !important; background: radial-gradient(circle, rgba(255,184,77,0.15), transparent 66%) !important; }
+    .hero { background: radial-gradient(ellipse 115% 48% at 50% 8%, rgba(255,184,77,0.10), transparent 58%) !important; }
   }
 
   /* ============================================================ */
