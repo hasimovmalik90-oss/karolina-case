@@ -2852,6 +2852,32 @@
     letter-spacing: 0.08em;
   }
 
+
+  .proof-shots.pair .proof-shot img { max-width: 300px; max-height: 520px; }
+  @media (max-width: 720px) {
+    .proof-shots.pair .proof-shot img { max-width: 276px; max-height: 520px; }
+  }
+  @media (max-width: 720px) {
+    .data-table.p3-table { table-layout: auto; }
+    .data-table.p3-table th { font-size: 9px; letter-spacing: 0.06em; padding-left: 4px; padding-right: 4px; }
+    .data-table.p3-table th, .data-table.p3-table td { word-break: normal; overflow-wrap: normal; hyphens: none; }
+    .data-table.p3-table td { font-size: 13px; padding-left: 4px; padding-right: 4px; }
+    .data-table.p3-table td.num { white-space: nowrap; }
+  }
+  /* ---------- AUDIENCE (phase 3) ---------- */
+  .aud-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 24px; }
+  .aud-card { background: var(--bg-card); border: 1px solid rgba(255, 184, 77, 0.12); border-radius: 18px; padding: 22px 20px; }
+  .aud-card h4 { margin: 0 0 18px; font-family: var(--mono); font-size: 11px; font-weight: 400; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+  .aud-row { margin-bottom: 14px; }
+  .aud-row:last-child { margin-bottom: 0; }
+  .aud-row-top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; font-size: 14px; color: var(--text); margin-bottom: 6px; }
+  .aud-row-top b { font-family: var(--mono); font-weight: 500; color: var(--gold-bright); }
+  .aud-bar { height: 6px; border-radius: 3px; background: rgba(255, 255, 255, 0.06); overflow: hidden; }
+  .aud-bar span { display: block; height: 100%; border-radius: 3px; background: linear-gradient(90deg, var(--gold-deep), var(--gold-bright)); }
+  .aud-note { margin-top: 28px; text-align: center; color: var(--text); font-size: 15px; line-height: 1.6; text-wrap: balance; }
+  .aud-note strong { color: var(--gold-bright); font-weight: 500; }
+  @media (max-width: 900px) { .aud-grid { grid-template-columns: 1fr; } }
+
   .proof-shot-single {
     display: flex;
     justify-content: center;
@@ -2923,17 +2949,17 @@
 <header class="hero" id="hero">
 
   <div class="hero-rail left">Apr 2025</div>
-  <div class="hero-rail right">Июль 2026</div>
+  <div class="hero-rail right">Сентябрь 2026</div>
 
   <div class="hero-tape">
     <div class="hero-meta">
       <div class="hero-meta-item">
         <span class="pulse"></span>
-        <span>Кейс · 2 фазы</span>
+        <span>Кейс · 3 фазы</span>
       </div>
       <div class="hero-meta-item">
         <span class="sep"></span>
-        <span class="accent">15 месяцев</span>
+        <span class="accent">17 месяцев</span>
         <span class="sep"></span>
       </div>
       <div class="hero-meta-item">
@@ -2946,15 +2972,15 @@
     <div class="hero-name reveal">Каролина</div>
 
     <div class="hero-number-wrap reveal reveal-delay-1">
-      <div class="hero-number" data-counter="153000">153&#8239;000</div>
+      <div class="hero-number" data-counter="179336">179&#8239;336</div>
     </div>
 
     <div class="hero-subtitle reveal reveal-delay-2">
       <span>с&nbsp;600</span>
       <span class="arrow">→</span>
-      <span class="accent">153&#8239;000</span>
+      <span class="accent">179&#8239;336</span>
       <span class="arrow">↗</span>
-      <span>×236</span>
+      <span>×276</span>
     </div>
 
     <p class="hero-tagline reveal reveal-delay-3">
@@ -2965,7 +2991,7 @@
 
     <div class="hero-kpi reveal reveal-delay-4">
       <div class="hero-kpi-cell">
-        <div class="hero-kpi-value">×236<sup>↑</sup></div>
+        <div class="hero-kpi-value">×276<sup>↑</sup></div>
         <div class="hero-kpi-label">Рост базы</div>
       </div>
       <div class="hero-kpi-cell">
@@ -2992,7 +3018,7 @@
 <!-- ============================================================ -->
 <div class="marquee">
   <div class="marquee-track">
-    <span class="marquee-item"><span class="num">153&nbsp;000</span> подписчиков</span>
+    <span class="marquee-item"><span class="num">179&nbsp;336</span> подписчиков</span>
     <span class="star">✦</span>
     <span class="marquee-item"><span class="num">12M</span> топ-ролик</span>
     <span class="star">✦</span>
@@ -3000,7 +3026,7 @@
     <span class="star">✦</span>
     <span class="marquee-item"><span class="num">100M+</span> охватов</span>
     <span class="star">✦</span>
-    <span class="marquee-item"><span class="num">×236</span> рост базы</span>
+    <span class="marquee-item"><span class="num">×276</span> рост базы</span>
     <span class="star">✦</span>
     <span class="marquee-item"><span class="num">4,7M</span> вирусный хит</span>
     <span class="star">✦</span>
@@ -3008,7 +3034,9 @@
     <span class="star">✦</span>
     <span class="marquee-item"><span class="num">sold out</span> коллекций</span>
     <span class="star">✦</span>
-    <span class="marquee-item"><span class="num">153&nbsp;000</span> подписчиков</span>
+    <span class="marquee-item"><span class="num">+16&nbsp;300</span> за&nbsp;3 недели фазы&nbsp;3</span>
+    <span class="star">✦</span>
+    <span class="marquee-item"><span class="num">179&nbsp;336</span> подписчиков</span>
     <span class="star">✦</span>
     <span class="marquee-item"><span class="num">12M</span> топ-ролик</span>
     <span class="star">✦</span>
@@ -3016,13 +3044,15 @@
     <span class="star">✦</span>
     <span class="marquee-item"><span class="num">100M+</span> охватов</span>
     <span class="star">✦</span>
-    <span class="marquee-item"><span class="num">×236</span> рост базы</span>
+    <span class="marquee-item"><span class="num">×276</span> рост базы</span>
     <span class="star">✦</span>
     <span class="marquee-item"><span class="num">4,7M</span> вирусный хит</span>
     <span class="star">✦</span>
     <span class="marquee-item"><span class="num">30+</span> вирусных роликов</span>
     <span class="star">✦</span>
     <span class="marquee-item"><span class="num">sold out</span> коллекций</span>
+    <span class="star">✦</span>
+    <span class="marquee-item"><span class="num">+16&nbsp;300</span> за&nbsp;3 недели фазы&nbsp;3</span>
     <span class="star">✦</span>
   </div>
 </div>
@@ -3039,7 +3069,7 @@
       100+ проектов. Медийные личности, блогеры-миллионники, лидеры рынка.
     </p>
     <p class="reveal reveal-delay-2">
-      С&nbsp;Каролиной с&nbsp;нуля сделали <strong>153&#8239;000 подписчиков</strong> и&nbsp;<strong>100+ млн охватов</strong>&nbsp;— две&nbsp;фазы работы плюс органический хвост, который сам&nbsp;дал +28&#8239;100 уже&nbsp;без&nbsp;моего участия.
+      С&nbsp;Каролиной с&nbsp;нуля сделали <strong>179&#8239;336 подписчиков</strong> и&nbsp;<strong>100+ млн охватов</strong>&nbsp;— три&nbsp;фазы работы плюс органический хвост между ними. Третья фаза идёт сейчас: <strong>+16&#8239;300 подписчиков за&nbsp;3&nbsp;недели</strong>.
     </p>
   </div>
 </section>
@@ -3067,8 +3097,8 @@
       </div>
 
       <div class="ab-cell after">
-        <div class="ab-label">Июль 2026</div>
-        <div class="ab-row"><div class="ab-row-label">Подписчиков</div><div class="ab-row-value">153&#8239;000 <span class="multiplier">×236</span></div></div>
+        <div class="ab-label">Сентябрь 2026</div>
+        <div class="ab-row"><div class="ab-row-label">Подписчиков</div><div class="ab-row-value">179&#8239;336 <span class="multiplier">×276</span></div></div>
         <div class="ab-row"><div class="ab-row-label">Охватов суммарно</div><div class="ab-row-value">100+ млн</div></div>
         <div class="ab-row"><div class="ab-row-label">Виральных роликов</div><div class="ab-row-value">30+</div></div>
         <div class="ab-row"><div class="ab-row-label">Топ-ролик</div><div class="ab-row-value">12&#8239;000&#8239;000</div></div>
@@ -3088,12 +3118,196 @@
 </section>
 
 <!-- ============================================================ -->
+<!-- PHASE 3 — SEPTEMBER 2026                                     -->
+<!-- ============================================================ -->
+<section class="section-bg-deep" id="phase3">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="eyebrow">Фаза 3 · с&nbsp;28 августа 2026</span>
+      <h2>Снова в&nbsp;работе <em>· +16&nbsp;300 за&nbsp;3 недели</em></h2>
+    </div>
+
+    <p class="method-intro reveal reveal-delay-1">
+      28 августа возобновили работу. На&nbsp;старте третьей фазы у&nbsp;Каролины было <em>163&nbsp;000 подписчиков</em>, на&nbsp;18 сентября&nbsp;— <em>179&nbsp;336</em>. Первый ролик фазы вышел 29 августа.
+    </p>
+
+    <h3 style="text-align: center; margin-top: 80px;" class="reveal">Аккаунт за&nbsp;30&nbsp;дней</h3>
+    <p style="text-align: center; color: var(--muted); font-family: var(--mono); font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 24px;" class="reveal">18 августа&nbsp;— 16 сентября 2026 · срез 18.09</p>
+
+    <div class="sprint-meta reveal">
+      <div class="sprint-meta-cell">
+        <div class="sprint-meta-value">12,2&nbsp;млн</div>
+        <div class="sprint-meta-label">просмотров</div>
+      </div>
+      <div class="sprint-meta-cell">
+        <div class="sprint-meta-value">+14&nbsp;470</div>
+        <div class="sprint-meta-label">чистый прирост подписчиков</div>
+      </div>
+      <div class="sprint-meta-cell">
+        <div class="sprint-meta-value">480&nbsp;тыс.</div>
+        <div class="sprint-meta-label">взаимодействий</div>
+      </div>
+      <div class="sprint-meta-cell">
+        <div class="sprint-meta-value">230&nbsp;тыс.</div>
+        <div class="sprint-meta-label">посещений профиля</div>
+      </div>
+    </div>
+
+    <div class="proof-shots pair reveal reveal-delay-1" style="margin-top: 48px;">
+      <div class="proof-shot">
+        <img src="img/profile-179k.jpg" alt="Профиль karolina_chitanava: 179 тыс. подписчиков, 18 сентября 2026" loading="lazy">
+        <div class="proof-shot-caption">профиль · <strong>179&nbsp;тыс.</strong> подписчиков</div>
+      </div>
+      <div class="proof-shot">
+        <img src="img/views-30d-12m.jpg" alt="Статистика за 30 дней: 12 203 497 просмотров, +14 470 подписчиков" loading="lazy">
+        <div class="proof-shot-caption">30 дней · <strong>12,2&nbsp;млн</strong> · <strong>+14&nbsp;470</strong></div>
+      </div>
+    </div>
+
+    <h3 style="text-align: center; margin-top: 80px;" class="reveal">Ролики фазы 3</h3>
+    <p style="text-align: center; color: var(--muted); font-family: var(--mono); font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 24px;" class="reveal">статистика Reels · 17–18 сентября</p>
+    <table class="data-table p3-table reveal">
+      <thead>
+        <tr>
+          <th>Ролик</th>
+          <th>Дата</th>
+          <th style="text-align:right;">Просмотры</th>
+          <th style="text-align:right;">Подписки</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong style="color: var(--gold-bright);">★</strong> «Почему вы выбрали такие имена для девочек?»</td>
+          <td class="num">30 авг</td>
+          <td class="num viral"><strong>2&nbsp;291&nbsp;006</strong></td>
+          <td class="num viral"><strong>+5&nbsp;944</strong></td>
+        </tr>
+        <tr>
+          <td>Проходка с&nbsp;дочками</td>
+          <td class="num">16 сен</td>
+          <td class="num">461&nbsp;577</td>
+          <td class="num">+1&nbsp;386</td>
+        </tr>
+        <tr>
+          <td>«NEW VLOG» · проходка в&nbsp;чёрном</td>
+          <td class="num">12 сен</td>
+          <td class="num">365&nbsp;762</td>
+          <td class="num">+1&nbsp;751</td>
+        </tr>
+        <tr>
+          <td>«Вечно мы куда-то опаздываем» · влог с&nbsp;дочками</td>
+          <td class="num">29 авг</td>
+          <td class="num">355&nbsp;033</td>
+          <td class="num">+1&nbsp;221</td>
+        </tr>
+        <tr>
+          <td>«Кто я по&nbsp;знаку зодиака?»</td>
+          <td class="num">4 сен</td>
+          <td class="num">228&nbsp;187</td>
+          <td class="num">+182</td>
+        </tr>
+        <tr>
+          <td>«JAMALI&nbsp;— стиль, женственность и&nbsp;кружево»</td>
+          <td class="num">5 сен</td>
+          <td class="num">85&nbsp;903</td>
+          <td class="num">+60</td>
+        </tr>
+        <tr>
+          <td>«А где Зелимхан?» · 6,3&nbsp;тыс. лайков</td>
+          <td class="num">1 сен</td>
+          <td class="num">—</td>
+          <td class="num">—</td>
+        </tr>
+        <tr>
+          <td><strong>Итого · 6&nbsp;роликов</strong></td>
+          <td class="num"></td>
+          <td class="num viral"><strong>3&nbsp;787&nbsp;468</strong></td>
+          <td class="num viral"><strong>+10&nbsp;544</strong></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="proof-shots pair reveal reveal-delay-1" style="margin-top: 56px;">
+      <div class="proof-shot">
+        <img src="img/reel-imena.jpg" alt="Статистика Reels «Почему вы выбрали такие имена для девочек?»: 2 291 006 просмотров, 5 944 подписки" loading="lazy">
+        <div class="proof-shot-caption">«имена» · <strong>2,29&nbsp;млн</strong> · <strong>+5&nbsp;944</strong></div>
+      </div>
+      <div class="proof-shot">
+        <img src="img/reel-foto-docheri.jpg" alt="Статистика Reels «Проходка с дочками»: 461 577 просмотров, 1 386 подписок" loading="lazy">
+        <div class="proof-shot-caption">с&nbsp;дочками · <strong>462&nbsp;тыс.</strong> · <strong>+1&nbsp;386</strong></div>
+      </div>
+      <div class="proof-shot">
+        <img src="img/reel-vlog-black.jpg" alt="Статистика Reels «NEW VLOG»: 365 762 просмотра, 1 751 подписка" loading="lazy">
+        <div class="proof-shot-caption">new vlog · <strong>366&nbsp;тыс.</strong> · <strong>+1&nbsp;751</strong></div>
+      </div>
+      <div class="proof-shot">
+        <img src="img/reel-red.jpg" alt="Статистика Reels «Вечно мы куда-то опаздываем»: 355 033 просмотра, 1 221 подписка" loading="lazy">
+        <div class="proof-shot-caption">влог с&nbsp;дочками · <strong>355&nbsp;тыс.</strong> · <strong>+1&nbsp;221</strong></div>
+      </div>
+    </div>
+
+    <div class="proof-shots pair reveal reveal-delay-2" style="margin-top: 28px;">
+      <div class="proof-shot">
+        <img src="img/reel-imena-eng.jpg" alt="«Имена»: 86,1 тыс. посещений профиля, 19,5 тыс. поделились" loading="lazy">
+        <div class="proof-shot-caption">«имена» · <strong>86,1&nbsp;тыс.</strong> визитов в&nbsp;профиль</div>
+      </div>
+      <div class="proof-shot">
+        <img src="img/top-subs-30d.jpg" alt="Топ контента по числу подписок за 30 дней: 5,9 тыс., 1,9 тыс., 1,9 тыс., 1,2 тыс." loading="lazy">
+        <div class="proof-shot-caption">топ по&nbsp;подпискам · 30 дней</div>
+      </div>
+    </div>
+
+    <p class="aud-note reveal">«Имена» увидели <strong>1,6&nbsp;млн</strong> человек, из&nbsp;них <strong>93,6%</strong>&nbsp;— ещё не&nbsp;подписчики. Ролик переслали <strong>19,5&nbsp;тыс.</strong> раз.</p>
+
+    <h3 style="text-align: center; margin-top: 80px;" class="reveal">Кто подписывается</h3>
+    <p style="text-align: center; color: var(--muted); font-family: var(--mono); font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 24px;" class="reveal">аудитория аккаунта · 18 сентября 2026</p>
+
+    <div class="aud-grid reveal">
+      <div class="aud-card">
+        <h4>Пол</h4>
+          <div class="aud-row"><div class="aud-row-top"><span>Женщины</span><b>95,8%</b></div><div class="aud-bar"><span style="width:95.8%"></span></div></div>
+          <div class="aud-row"><div class="aud-row-top"><span>Мужчины</span><b>4,2%</b></div><div class="aud-bar"><span style="width:4.2%"></span></div></div>
+      </div>
+      <div class="aud-card">
+        <h4>Возраст</h4>
+          <div class="aud-row"><div class="aud-row-top"><span>18–24</span><b>29,7%</b></div><div class="aud-bar"><span style="width:29.7%"></span></div></div>
+          <div class="aud-row"><div class="aud-row-top"><span>25–34</span><b>37,8%</b></div><div class="aud-bar"><span style="width:37.8%"></span></div></div>
+          <div class="aud-row"><div class="aud-row-top"><span>35–44</span><b>18,1%</b></div><div class="aud-bar"><span style="width:18.1%"></span></div></div>
+          <div class="aud-row"><div class="aud-row-top"><span>45–54</span><b>7,9%</b></div><div class="aud-bar"><span style="width:7.9%"></span></div></div>
+          <div class="aud-row"><div class="aud-row-top"><span>13–17 и&nbsp;55+</span><b>6,5%</b></div><div class="aud-bar"><span style="width:6.5%"></span></div></div>
+      </div>
+      <div class="aud-card">
+        <h4>Страны</h4>
+          <div class="aud-row"><div class="aud-row-top"><span>Россия</span><b>66,5%</b></div><div class="aud-bar"><span style="width:66.5%"></span></div></div>
+          <div class="aud-row"><div class="aud-row-top"><span>Казахстан</span><b>6,7%</b></div><div class="aud-bar"><span style="width:6.7%"></span></div></div>
+          <div class="aud-row"><div class="aud-row-top"><span>Украина</span><b>4,7%</b></div><div class="aud-bar"><span style="width:4.7%"></span></div></div>
+          <div class="aud-row"><div class="aud-row-top"><span>Беларусь</span><b>2,3%</b></div><div class="aud-bar"><span style="width:2.3%"></span></div></div>
+          <div class="aud-row"><div class="aud-row-top"><span>Кыргызстан</span><b>2,3%</b></div><div class="aud-bar"><span style="width:2.3%"></span></div></div>
+      </div>
+    </div>
+
+    <p class="aud-note reveal">Ролики фазы 3 смотрят в&nbsp;основном новые люди: <strong>от&nbsp;58&nbsp;до&nbsp;94%</strong> зрителей каждого ролика&nbsp;— не&nbsp;подписчики.</p>
+
+    <div class="proof-shots pair reveal reveal-delay-1" style="margin-top: 40px;">
+      <div class="proof-shot">
+        <img src="img/aud-age.jpg" alt="Аудитория: женщины 95,8%, возраст 25–34 — 37,8%" loading="lazy">
+        <div class="proof-shot-caption">пол и&nbsp;возраст</div>
+      </div>
+      <div class="proof-shot">
+        <img src="img/aud-geo.jpg" alt="География: Россия 66,5%, Казахстан 6,7%, Украина 4,7%" loading="lazy">
+        <div class="proof-shot-caption">география</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
 <!-- ACCOUNT — FRESH MONTH                                        -->
 <!-- ============================================================ -->
 <section id="account-month">
   <div class="container">
     <div class="section-header reveal">
-      <span class="eyebrow">Аккаунт за&nbsp;месяц</span>
+      <span class="eyebrow">Фаза 2 · май 2026</span>
       <h2>Рекордный месяц <em>· +51&nbsp;800 за 30 дней</em></h2>
     </div>
 
@@ -3161,7 +3375,7 @@
   <div class="container-wide">
     <div class="section-header reveal">
       <span class="eyebrow">Кривая роста</span>
-      <h2>От&nbsp;600 <em>до&nbsp;153&nbsp;000</em></h2>
+      <h2>От&nbsp;600 <em>до&nbsp;179&nbsp;336</em></h2>
     </div>
 
     <div class="chart-wrap reveal reveal-delay-1">
@@ -3187,40 +3401,43 @@
         <line class="chart-grid" x1="80" y1="320" x2="880" y2="320"/>
 
         <!-- Y-axis labels -->
-        <text class="chart-y-label" x="68" y="44" text-anchor="end">150K</text>
-        <text class="chart-y-label" x="68" y="100" text-anchor="end">120K</text>
-        <text class="chart-y-label" x="68" y="156" text-anchor="end">90K</text>
-        <text class="chart-y-label" x="68" y="212" text-anchor="end">60K</text>
-        <text class="chart-y-label" x="68" y="268" text-anchor="end">30K</text>
+        <text class="chart-y-label" x="68" y="44" text-anchor="end">180K</text>
+        <text class="chart-y-label" x="68" y="100" text-anchor="end">144K</text>
+        <text class="chart-y-label" x="68" y="156" text-anchor="end">108K</text>
+        <text class="chart-y-label" x="68" y="212" text-anchor="end">72K</text>
+        <text class="chart-y-label" x="68" y="268" text-anchor="end">36K</text>
         <text class="chart-y-label" x="68" y="324" text-anchor="end">0</text>
 
         <!-- Area fill -->
-        <path class="chart-area" d="M 80 320 L 160 301 L 240 279 L 320 258 L 400 222 L 720 170 L 860 38 L 860 320 L 80 320 Z"/>
+        <path class="chart-area" d="M 80 319 L 160 304 L 240 285 L 320 268 L 400 234 L 600 195 L 700 82 L 790 66 L 860 41 L 860 320 L 80 320 Z"/>
 
-        <!-- Active phase 1 -->
-        <path class="chart-path" d="M 80 320 L 160 301 L 240 279 L 320 258 L 400 222 L 720 170 L 860 38"/>
+        <!-- Line: phase 1 → tail → phase 2 → tail → phase 3 -->
+        <path class="chart-path" d="M 80 319 L 160 304 L 240 285 L 320 268 L 400 234 L 600 195 L 700 82 L 790 66 L 860 41"/>
 
-        <!-- Pause indication -->
-        <line x1="400" y1="222" x2="720" y2="170" stroke="var(--muted)" stroke-width="1.2" stroke-dasharray="3 5" opacity="0.6"/>
+        <!-- Pause indication (organic tails) -->
+        <line x1="400" y1="234" x2="600" y2="195" stroke="var(--muted)" stroke-width="1.2" stroke-dasharray="3 5" opacity="0.6"/>
+        <line x1="700" y1="82" x2="790" y2="66" stroke="var(--muted)" stroke-width="1.2" stroke-dasharray="3 5" opacity="0.6"/>
 
         <!-- Pause label -->
-        <text class="chart-pause-label" x="560" y="184" text-anchor="middle">Органический хвост · 7&nbsp;мес.</text>
+        <text class="chart-pause-label" x="500" y="254" text-anchor="middle">Органический хвост · 7&nbsp;мес.</text>
 
         <!-- Data points -->
-        <circle class="chart-dot delay-1" cx="80" cy="320" r="5"/>
-        <circle class="chart-dot delay-2" cx="160" cy="301" r="5"/>
-        <circle class="chart-dot delay-3" cx="240" cy="279" r="5"/>
-        <circle class="chart-dot delay-4" cx="320" cy="258" r="5"/>
-        <circle class="chart-dot delay-5" cx="400" cy="222" r="5"/>
-        <circle class="chart-dot delay-6" cx="720" cy="170" r="5"/>
+        <circle class="chart-dot delay-1" cx="80" cy="319" r="5"/>
+        <circle class="chart-dot delay-2" cx="160" cy="304" r="5"/>
+        <circle class="chart-dot delay-3" cx="240" cy="285" r="5"/>
+        <circle class="chart-dot delay-4" cx="320" cy="268" r="5"/>
+        <circle class="chart-dot delay-5" cx="400" cy="234" r="5"/>
+        <circle class="chart-dot delay-6" cx="600" cy="195" r="5"/>
+        <circle class="chart-dot delay-6" cx="700" cy="82" r="5"/>
+        <circle class="chart-dot delay-6" cx="790" cy="66" r="5"/>
 
         <!-- Final peak point -->
-        <circle class="chart-peak-ring" cx="860" cy="38" r="8"/>
-        <circle class="chart-peak-dot" cx="860" cy="38" r="7"/>
+        <circle class="chart-peak-ring" cx="860" cy="41" r="8"/>
+        <circle class="chart-peak-dot" cx="860" cy="41" r="7"/>
 
         <!-- Annotations -->
-        <text class="chart-annotation" x="240" y="265" text-anchor="middle">VIRAL</text>
-        <text class="chart-annotation" x="860" y="28" text-anchor="end">153&nbsp;000</text>
+        <text class="chart-annotation" x="240" y="271" text-anchor="middle">VIRAL</text>
+        <text class="chart-annotation" x="860" y="26" text-anchor="end">179&nbsp;336</text>
 
         <!-- X-axis labels -->
         <text class="chart-x-label" x="80" y="355" text-anchor="middle">Apr 25</text>
@@ -3228,8 +3445,9 @@
         <text class="chart-x-label" x="240" y="355" text-anchor="middle">Jun</text>
         <text class="chart-x-label" x="320" y="355" text-anchor="middle">Jul</text>
         <text class="chart-x-label" x="400" y="355" text-anchor="middle">Aug</text>
-        <text class="chart-x-label" x="720" y="355" text-anchor="middle">Apr 26</text>
-        <text class="chart-x-label" x="860" y="355" text-anchor="middle">Jun 26</text>
+        <text class="chart-x-label" x="600" y="355" text-anchor="middle">Apr 26</text>
+        <text class="chart-x-label" x="700" y="355" text-anchor="middle">Jul 26</text>
+        <text class="chart-x-label" x="860" y="355" text-anchor="middle">Sep 26</text>
       </svg>
 
       <div class="chart-legend">
@@ -3275,7 +3493,11 @@
       </div>
       <div class="proof-shot">
         <img src="img/profile-153k.jpg" alt="Профиль 153 тыс. подписчиков" loading="lazy">
-        <div class="proof-shot-caption">сегодня · <strong>153&nbsp;К</strong></div>
+        <div class="proof-shot-caption">июль · <strong>153&nbsp;К</strong></div>
+      </div>
+      <div class="proof-shot">
+        <img src="img/profile-179k.jpg" alt="Профиль 179 тыс. подписчиков, 18 сентября 2026" loading="lazy">
+        <div class="proof-shot-caption">18 сентября · <strong>179&nbsp;К</strong></div>
       </div>
     </div>
   </div>
@@ -3509,12 +3731,23 @@
       </div>
 
       <div class="timeline-item peak reveal reveal-delay-2">
-        <div class="timeline-date">Июль 2026 · органический хвост продолжается</div>
-        <div class="timeline-title">153&#8239;000<span class="multiplier">×236 к&nbsp;старту</span></div>
+        <div class="timeline-date">Июль&nbsp;— Август 2026 · органический хвост</div>
+        <div class="timeline-title">163&#8239;000<span class="multiplier">×251 к&nbsp;старту</span></div>
         <ul class="timeline-stats">
-          <li class="highlight">Блог продолжает расти и&nbsp;после активной работы</li>
+          <li class="highlight">Без активной работы блог вырос со&nbsp;153&nbsp;000 до&nbsp;163&nbsp;000</li>
           <li>Виральные ролики докручиваются по&nbsp;лонгтейлу: 1,14&nbsp;млн&nbsp;→&nbsp;1,3&nbsp;млн · 752&nbsp;К&nbsp;→&nbsp;886&nbsp;К · 363&nbsp;К&nbsp;→&nbsp;714&nbsp;К</li>
           <li>Свежий срез на&nbsp;4 июля&nbsp;— ниже в&nbsp;разделе «Свежие хиты»</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item peak reveal reveal-delay-3">
+        <div class="timeline-date">С&nbsp;28 августа 2026 · третья фаза</div>
+        <div class="timeline-title">179&#8239;336<span class="multiplier">×276 к&nbsp;старту</span></div>
+        <ul class="timeline-stats">
+          <li class="highlight">За&nbsp;3 недели (28&nbsp;авг&nbsp;— 18&nbsp;сен)&nbsp;— <strong>+16&nbsp;300 подписчиков</strong></li>
+          <li>За&nbsp;30 дней: просмотры <strong>12,2&nbsp;млн</strong> · взаимодействия <strong>480&nbsp;тыс.</strong> · посещения профиля <strong>230&nbsp;тыс.</strong></li>
+          <li>«Почему такие имена для девочек?»&nbsp;— <strong>2,29&nbsp;млн</strong> просмотров, <strong>+5&nbsp;944</strong> подписчика</li>
+          <li>Подробности&nbsp;— в&nbsp;разделе «Фаза 3»</li>
         </ul>
       </div>
 
@@ -3654,7 +3887,7 @@
     <div class="proof-shot-single reveal reveal-delay-6" style="margin-top: 28px;">
       <div class="proof-shot">
         <img src="img/profile-153k.jpg" alt="Профиль karolina_chitanava — 153 тыс. подписчиков" loading="lazy">
-        <div class="proof-shot-caption">профиль сегодня · <strong>153&nbsp;тыс.</strong> подписчиков</div>
+        <div class="proof-shot-caption">профиль на&nbsp;4 июля · <strong>153&nbsp;тыс.</strong> подписчиков</div>
       </div>
     </div>
 
@@ -3989,7 +4222,7 @@
         Малик, будет 100к у&nbsp;нас.<br>С&nbsp;двух рилсов 😍😍😍😍
       </div>
       <div class="client-tease-author">— Каролина в&nbsp;моменте, май 2026</div>
-      <div class="client-tease-result">Прогноз сбылся и&nbsp;перевыполнен. За&nbsp;тот месяц&nbsp;— <strong>+51&nbsp;800 новых подписок</strong> и&nbsp;база <strong>146&nbsp;000</strong>, а&nbsp;сегодня&nbsp;— уже&nbsp;<strong>153&nbsp;000</strong> подписчиков.</div>
+      <div class="client-tease-result">Прогноз сбылся и&nbsp;перевыполнен. За&nbsp;тот месяц&nbsp;— <strong>+51&nbsp;800 новых подписок</strong> и&nbsp;база <strong>146&nbsp;000</strong>, а&nbsp;в&nbsp;сентябре&nbsp;— уже&nbsp;<strong>179&nbsp;336</strong> подписчиков.</div>
     </div>
 
     <div class="stories-block reveal">
@@ -4066,11 +4299,11 @@
 
       <div class="reveal reveal-delay-1">
         <h3>Профиль превратился в&nbsp;рекламный инвентарь</h3>
-        <p>В&nbsp;био Каролины (июль 2026):</p>
+        <p>В&nbsp;био Каролины (сентябрь 2026):</p>
         <ul class="business-list">
-          <li><span class="label">Подписчиков</span><span class="value glow">153&nbsp;К</span></li>
-          <li><span class="label">Публикаций</span><span class="value">124</span></li>
-          <li><span class="label">Подписок</span><span class="value">131</span></li>
+          <li><span class="label">Подписчиков</span><span class="value glow">179&nbsp;К</span></li>
+          <li><span class="label">Публикаций</span><span class="value">151</span></li>
+          <li><span class="label">Подписок</span><span class="value">126</span></li>
           <li><span class="label">Cooperation</span><span class="value" style="font-family: var(--mono); font-size: 13px;">@pr_karolinachitanava</span></li>
           <li><span class="label">Stories highlights</span><span class="value">5 рубрик</span></li>
         </ul>
@@ -4333,8 +4566,8 @@
 
     <div class="footer-meta reveal reveal-delay-4">
       Кейс: Каролина Читанава × Малик Хашимов<br>
-      Период работы: 21.04.2025&nbsp;— июль 2026 · 2 фазы · перерыв 7&nbsp;мес.<br>
-      Актуальные данные: июль 2026
+      Период работы: 21.04.2025&nbsp;— сейчас · 3 фазы · третья с&nbsp;28.08.2026<br>
+      Актуальные данные: 18 сентября 2026
     </div>
   </div>
 </footer>
@@ -4378,7 +4611,7 @@
     hideSplash();
   }
 
-  setTimeout(() => animateCounter(splashCounter, 153000, 1800), 700);
+  setTimeout(() => animateCounter(splashCounter, 179336, 1800), 700);
   setTimeout(hideSplash, 3200);
 
   document.addEventListener('mousemove', (e) => {
