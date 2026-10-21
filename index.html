@@ -4768,5 +4768,43 @@
   });
 </script>
 
+<!-- polish: увеличение скринов по нажатию + ровные ряды -->
+<style id="polish-css">
+  @media (min-width: 721px) {
+    .container .proof-shots.works-row:not(.w2):not(.w3) { width: min(1120px, calc(100vw - 64px)); max-width: none; margin-left: calc(50% - min(560px, 50vw - 32px)); margin-right: 0; }
+    .container .proof-shots.works-row.w3 { width: min(900px, calc(100vw - 64px)); max-width: none; margin-left: calc(50% - min(450px, 50vw - 32px)); margin-right: 0; }
+  }
+  .proof-shots.works-row { align-items: stretch; }
+  .proof-shots.works-row .proof-shot.work { flex-direction: column; }
+  .proof-shots.works-row .proof-shot.work .proof-shot-caption { margin-top: auto; padding-top: 10px; }
+  img.zoomable { cursor: zoom-in; }
+  #zoomBox { position: fixed; inset: 0; z-index: 200000; background: rgba(6, 6, 7, 0.94); display: none; align-items: center; justify-content: center; padding: 18px; cursor: zoom-out; -webkit-tap-highlight-color: transparent; }
+  #zoomBox.on { display: flex; }
+  #zoomBox img { max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 10px; box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6); }
+  #zoomBox span { position: absolute; top: 14px; right: 18px; color: #E8DCC8; font: 300 30px/1 system-ui, sans-serif; opacity: 0.8; }
+</style>
+<div id="zoomBox" aria-hidden="true"><span>×</span><img alt=""></div>
+<script>
+(function () {
+  var box = document.getElementById('zoomBox'), big = box.querySelector('img');
+  function ok(img) {
+    if (img.closest('a, #zoomBox, .splash, #splash, .marquee, nav, .hero')) return false;
+    var nw = img.naturalWidth || 0;
+    return nw >= 300 && img.getBoundingClientRect().width < nw * 0.85;
+  }
+  function mark() { document.querySelectorAll('img').forEach(function (i) { i.classList.toggle('zoomable', ok(i)); }); }
+  window.addEventListener('load', mark); window.addEventListener('resize', mark);
+  document.addEventListener('load', function (e) { if (e.target.tagName === 'IMG') e.target.classList.toggle('zoomable', ok(e.target)); }, true);
+  document.addEventListener('click', function (e) {
+    var img = e.target.closest && e.target.closest('img.zoomable');
+    if (!img) return;
+    e.preventDefault(); big.src = img.currentSrc || img.src; big.alt = img.alt || ''; box.classList.add('on'); document.documentElement.style.overflow = 'hidden';
+  });
+  function close() { box.classList.remove('on'); big.removeAttribute('src'); document.documentElement.style.overflow = ''; }
+  box.addEventListener('click', close);
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+})();
+</script>
+
 </body>
 </html>
