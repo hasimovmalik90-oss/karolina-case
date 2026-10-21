@@ -2936,7 +2936,7 @@
 </style>
 </head>
 <body>
-<a href="https://hasimovmalik90-oss.github.io/Site-/works/" class="to-works" style="position:fixed;bottom:16px;left:16px;box-shadow:0 6px 24px rgba(0,0,0,.45);z-index:100000;display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:30px;background:rgba(12,11,10,.72);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border:1px solid rgba(201,183,155,.35);color:#E8DCC8;font:500 13px/1.2 Mulish,Inter,system-ui,sans-serif;letter-spacing:.02em;text-decoration:none">← Все работы</a>
+<a href="https://hasimovmalik90-oss.github.io/Site-/works/" class="to-works">Все работы</a>
 
 <!-- ============================================================ -->
 <!-- SPLASH SCREEN                                                -->
@@ -4815,5 +4815,36 @@
 })();
 </script>
 
+<!-- buttons v2 -->
+<style id="buttons-v2">
+  .apply-btn, .cta { position: relative; overflow: hidden; display: inline-flex !important; align-items: center; gap: 14px; padding: 8px 8px 8px 26px !important; border-radius: 999px !important;
+    font-family: Mulish, Inter, system-ui, sans-serif !important; font-size: 13px !important; font-weight: 700 !important; letter-spacing: .14em !important; text-transform: uppercase; text-decoration: none !important;
+    color: #15110b !important; background: linear-gradient(180deg, #f3dcae 0%, #d9b673 55%, #c79d54 100%) !important;
+    box-shadow: 0 1px 0 rgba(255,255,255,.55) inset, 0 -2px 0 rgba(0,0,0,.18) inset, 0 12px 34px -10px rgba(217,182,115,.65) !important;
+    transition: transform .25s ease, box-shadow .25s ease !important; -webkit-tap-highlight-color: transparent; }
+  .apply-btn::after, .cta::after { content: '→'; display: inline-flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 50%;
+    background: #15110b; color: #f3dcae; font-size: 17px; letter-spacing: 0; transition: transform .25s ease; }
+  .apply-btn::before, .cta::before { content: ''; position: absolute; top: 0; left: -60%; width: 40%; height: 100%; transform: skewX(-20deg);
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,.55), transparent); transition: left .6s ease; pointer-events: none; }
+  .apply-btn:hover, .cta:hover { transform: translateY(-2px); box-shadow: 0 1px 0 rgba(255,255,255,.6) inset, 0 -2px 0 rgba(0,0,0,.18) inset, 0 18px 44px -10px rgba(217,182,115,.85) !important; }
+  .apply-btn:hover::before, .cta:hover::before { left: 120%; }
+  .apply-btn:hover::after, .cta:hover::after { transform: translateX(3px); }
+  .apply-btn:active, .cta:active { transform: translateY(0) scale(.97); }
+  a.to-works { all: unset; position: fixed; left: 16px; bottom: 16px; z-index: 100000; display: inline-flex; align-items: center; gap: 10px; padding: 6px 16px 6px 6px; border-radius: 999px; cursor: pointer;
+    background: rgba(14,13,12,.78); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); border: 1px solid rgba(217,182,115,.35);
+    color: #efe3cc; font: 600 13px/1 Mulish, Inter, system-ui, sans-serif; letter-spacing: .02em; box-shadow: 0 10px 30px rgba(0,0,0,.5);
+    transition: transform .2s ease, border-color .2s ease, background .2s ease; -webkit-tap-highlight-color: transparent; }
+  a.to-works::before { content: '←'; display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; border-radius: 50%;
+    background: linear-gradient(180deg, #f3dcae, #c79d54); color: #15110b; font-size: 15px; margin-right: -8px; }
+  a.to-works:hover { border-color: rgba(217,182,115,.7); transform: translateY(-2px); }
+  a.to-works:active { transform: scale(.96); background: rgba(40,33,22,.9); }
+  /* контакты: ощутимый клик */
+  .contacts a { position: relative; transition: transform .22s ease, border-color .22s ease, background .22s ease, box-shadow .22s ease !important; -webkit-tap-highlight-color: transparent; }
+  .contacts a:has(> .t)::after { content: '↗'; position: absolute; top: 14px; right: 16px; font-size: 15px; color: #d9b673; opacity: .45; transition: transform .22s ease, opacity .22s ease; }
+  .contacts a:hover { transform: translateY(-3px); border-color: rgba(217,182,115,.6) !important; background: linear-gradient(180deg, rgba(217,182,115,.14), rgba(217,182,115,.04)) !important; box-shadow: 0 16px 40px -18px rgba(217,182,115,.6); }
+  .contacts a:has(> .t):hover::after { opacity: 1; transform: translate(2px,-2px); }
+  .contacts a:hover .v { color: #f3dcae !important; }
+  .contacts a:active { transform: scale(.97); background: rgba(217,182,115,.22) !important; border-color: #d9b673 !important; }
+</style>
 </body>
 </html>
