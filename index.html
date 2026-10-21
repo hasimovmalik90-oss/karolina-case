@@ -2927,9 +2927,14 @@
     .audit-head h3 { font-size: 30px; }
     .audit-btn { font-size: 12px; letter-spacing: 0.12em; }
   }
+  .apply { text-align: center; margin: 8px auto 56px; }
+  .apply p { color: var(--muted); max-width: 520px; margin: 0 auto 22px; }
+  .apply-btn { display: inline-block; padding: 18px 34px; border-radius: 999px; background: linear-gradient(135deg, var(--gold-bright), #c98a2e); color: #14100a; font-family: var(--mono); font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; text-decoration: none; font-weight: 600; box-shadow: 0 0 38px rgba(255, 184, 77, 0.28); transition: transform .2s, box-shadow .2s; }
+  .apply-btn:hover { transform: translateY(-2px); box-shadow: 0 0 52px rgba(255, 184, 77, 0.42); }
+  #splash { display: none !important; }
 </style>
 </head>
-<body class="splash-active">
+<body>
 <a href="https://hasimovmalik90-oss.github.io/Site-/works/" class="to-works" style="position:fixed;bottom:16px;left:16px;box-shadow:0 6px 24px rgba(0,0,0,.45);z-index:100000;display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:30px;background:rgba(12,11,10,.72);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border:1px solid rgba(201,183,155,.35);color:#E8DCC8;font:500 13px/1.2 Mulish,Inter,system-ui,sans-serif;letter-spacing:.02em;text-decoration:none">← Все работы</a>
 
 <!-- ============================================================ -->
@@ -4552,6 +4557,10 @@
   <div class="container">
     <span class="eyebrow reveal">Контакты</span>
     <h2 class="reveal reveal-delay-1">Связаться</h2>
+    <div class="apply reveal reveal-delay-2">
+      <p>Хотите так&nbsp;же? Оставьте заявку на&nbsp;личную работу&nbsp;— отвечу лично.</p>
+      <a class="apply-btn" href="https://thin-erica-531.notion.site/0bbc8b667bf041afb057a8e3321027ea" target="_blank" rel="noopener">Заявка на&nbsp;личную работу</a>
+    </div>
     <p class="footer-tagline reveal reveal-delay-2">По&nbsp;вопросам сотрудничества</p>
 
     <div class="contacts reveal reveal-delay-3">
@@ -4645,8 +4654,7 @@
     hideSplash();
   }
 
-  setTimeout(() => animateCounter(splashCounter, 185000, 1800), 700);
-  setTimeout(hideSplash, 3200);
+  hideSplash();
 
   document.addEventListener('mousemove', (e) => {
     document.documentElement.style.setProperty('--mx', e.clientX + 'px');
@@ -4700,7 +4708,7 @@
 
   const navDots = document.getElementById('navDots');
   const dots = document.querySelectorAll('.nav-dot');
-  setTimeout(() => navDots.classList.add('visible'), 3400);
+  setTimeout(() => navDots.classList.add('visible'), 600);
 
   dots.forEach(dot => {
     dot.addEventListener('click', () => {
